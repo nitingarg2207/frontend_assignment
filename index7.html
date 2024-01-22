@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let f = ()=>{
+            console.log("Hello");
+        }
+        // setTimeout(f,5000);
+        // setInterval(f,1000);
+
+        // let TimerId = setTimeout(f,1000);
+        // clearTimeout(TimerId)
+
+        let count=0;
+        let TimerId = setInterval(function(){
+            count++;
+            console.log("Hello");
+            if(count==5){
+                clearInterval(TimerId);
+            }
+        },1000);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

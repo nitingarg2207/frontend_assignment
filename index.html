@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML intro session</title>
+</head>
+
+<body>
+    <h2>User Details</h2>
+    <form action="/index.html">
+        <div class="inputlabel">
+            <label for="uname">Username: </label>
+            <input type="text" name="username" id="uname">
+        </div>
+        <br>
+
+        <div class="inputlabel">
+            <label for="userage">Age: </label>
+            <input type="number" name="age" id="userage" min="1">
+        </div>
+        <br>
+        <div class="inputlabel">
+            <label for="designation">Designation: </label>
+            <input type="text" name="designation" id="desgnation" value="Software Developer" disabled>
+        </div>
+        <br>
+        <div class="inputlabel">
+            <label for="address">Address: </label>
+            <textarea name="address" id="address" cols="10" rows="2"></textarea>
+        </div>
+        <br>
+        <div class="inputlabel">
+            Gender:
+            <span>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male </label>
+            </span>
+            <span>
+                <input type="radio" name="gender" value="female" id=="female">
+                <label for="female">Female </label>
+            </span>
+        </div>
+    </form>
+</body>
+
+</html>

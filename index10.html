@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Count: <span id="output">0</span>
+    </div>
+    <div>
+        <button onclick="start()" id="start">Start</button>
+        <button onclick="end()" id="end">End</button>
+        <button onclick="restart()" id="restart">Reset</button>
+    </div>
+
+    <script>
+        var count=0;
+        var TimerId;
+        var start=()=>{
+            document.getElementById("start").disabled=true;
+            TimerId=setInterval(()=>{
+                count++;
+                document.getElementById("output").innerHTML=count;
+            },1000)
+        }
+        var end=()=>{
+            document.getElementById("start").disabled=false;
+            clearInterval(TimerId);
+        }
+        var restart=()=>{
+            end();
+            count=0;
+            document.getElementById("output").innerHTML=count;
+        }
+    </script>
+</body>
+</html>

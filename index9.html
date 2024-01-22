@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            1st Number: <input id="n1" type="text" value="">
+            2nd Number: <input id="n2" type="text" value="">
+        </div>
+        <br>
+        <div>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="division()">Division</button>
+        </div>
+        <div>
+            Output: <p id="output"></p>
+        </div>
+    </div>
+    <script>
+        var multiply = ()=>{
+            let first = Number(document.getElementById("n1").value);
+            let second = Number(document.getElementById("n2").value);
+            document.getElementById("output").innerHTML=first*second;
+        }
+        var division = ()=>{
+            let first = Number(document.getElementById("n1").value);
+            let second = Number(document.getElementById("n2").value);
+            document.getElementById("output").innerHTML=first/second;
+        }
+    </script>
+</body>
+</html>

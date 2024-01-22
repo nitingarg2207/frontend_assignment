@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: end;
+        }
+        #box1{
+            background-color: red;
+            position: relative;
+        }
+        #box2{
+            background-color: yellow;
+            position: relative;
+            bottom:40px;
+            left: 70px;
+            /* z-index: -1; */
+        }
+        #box3{
+            background-color: green;
+            position: relative;
+            bottom: 80px;
+            left: 140px;
+        }
+    </style>
+    <script>
+        var f = (e)=>{
+            let currElement = e.target;
+            let elements = document.getElementsByClassName("box");
+            for(var i=0;i<elements.length;i++){
+                let element = elements[i];
+                if(element.id!=currElement.id){
+                    element.style.zIndex=0;
+                }
+            }
+            currElement.style.zIndex=1
+        }
+    </script>
+</head>
+<body>
+    <div class="box" id="box1" onclick="f(event)">Div 1</div>
+    <div class="box" id="box2" onclick="f(event)">Div 2</div>
+    <div class="box" id="box3" onclick="f(event)">Div 3</div>
+</body>
+</html>
